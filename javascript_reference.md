@@ -94,4 +94,6 @@ This is so cool!!!!!
 
 #### Where to place the script?
 
-For content that is 
+For content that is loaded as soon as the page is. place the script in the `<head></head>` tags. 
+
+For scripts that fetch information as the browser loads, such as retrieving browser versions and geolocation (above) place the scriptin the `<body></body>` tags. 
