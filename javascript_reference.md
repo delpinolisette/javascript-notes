@@ -112,3 +112,18 @@ Type 1: Immediate Execution
 - these scripts usually placed in body tag. 
 
 Type 2: Deffered Scripts
+- for these, use *functions*
+- these scripts run in three ways: immediately after a document loads, in response to a user action, or when they are invoked by another script.
+- p 102
+
+
+### Functions in JS
+
+
+# JS Tasks for site:
+
+1. make a tree view/ folder view for all projects. 
+2. on click, make folder drop down and display new structure
+3. 
+   
+
