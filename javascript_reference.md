@@ -114,7 +114,7 @@ Type 1: Immediate Execution
 Type 2: Deffered Scripts
 - for these, use *functions*
 - these scripts run in three ways: immediately after a document loads, in response to a user action, or when they are invoked by another script.
-- p 102
+- p 102 resume for next time 
 
 
 ### Functions in JS
@@ -124,6 +124,8 @@ Type 2: Deffered Scripts
 
 1. make a tree view/ folder view for all projects. 
 2. on click, make folder drop down and display new structure
-3. 
+3. make an interactive path finding algorithm on separate site
+4. make an interactive numerical computing algorithm on a different site - can prototype in a jupyter notebook. yay! can work on this with Ben!
+5. 
    
 
