@@ -26,6 +26,8 @@ here the `<B>` is the HTML boldface element, and `navigator` is the broswer obje
 
 Scripts written after comment lines are rendered on all browsers that are not ancient, hence the "end of script hiding" line
 
+Why does this work? Very old browsers not only comepletely ignore the scripts between the js script tags, they also try to render the content as html. The JS "enclose in comments" trick is a quick and dirty way to make older browsers ignore JS scripts, by enclosing them in code. THis is neat....but also ugly lol
+
 ### Document Object Model 
 
 Controls the madness of adding dozens of separate objects to a page. The model servers as a prototype for the rendering of the page. 
@@ -97,3 +99,16 @@ This is so cool!!!!!
 For content that is loaded as soon as the page is. place the script in the `<head></head>` tags. 
 
 For scripts that fetch information as the browser loads, such as retrieving browser versions and geolocation (above) place the scriptin the `<body></body>` tags. 
+
+JS accepts a semicolon at the end of every statement!!! but it's certainly not necessary. 
+
+notice that you can use html comments structure or just `//` while commenting in a js script. (this is most useful when writing code in a separate js file.)
+
+### Script Execution Mechanics:
+
+Type 1: Immediate Execution
+
+- immediate statements, they need information from the browser and load content as the page loads
+- these scripts usually placed in body tag. 
+
+Type 2: Deffered Scripts
