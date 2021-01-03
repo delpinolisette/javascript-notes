@@ -41,6 +41,7 @@ While:
 are allowed in JS, a cleaner decision construct is `switch`:
 
 ```javascript
+putstr()
 ```
 # Arrays
 # Lists
