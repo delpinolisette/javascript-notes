@@ -1,4 +1,4 @@
-### JavaScript Notes
+# JavaScript Notes
 
 ### Script Interacting with Navigator Object (User's Browser Info)
 
