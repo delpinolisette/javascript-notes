@@ -91,7 +91,35 @@ var scope = 10;  //declared after function
 console.log(scope);  // returns 10
 console.log(showScope()); 
 ```
-setting `scope = 10` without using `var` would have worked as well, but when omitting `var` from a 
+setting `scope = 10` without using `var` would have worked as well, but when omitting `var` from a variable declaration makes it global, even when we do it inside of a function (the difference is that the variable is reassinged globally when the function is called). For example:
+
+```javascript
+function showScope() {
+    var scope = 2; 
+    return scope; 
+}
+
+var scope = 10;  //declared after function
+
+console.log(scope);  // returns 10
+console.log(showScope()); //returns 2
+console.log(scope); //returns 10
+```
+This works as expected. Now notice that happens when we omit the `var`
+
+```javascript
+function showScope() {
+    scope = 2; 
+    return scope; 
+}
+
+scope = 10;  //declared after function
+
+console.log(scope);  // returns 10
+console.log(showScope()); //returns 2
+console.log(scope); //returns 2!!
+```
+From this we can see that for expected behavior, we should always declare variables with `var` before using them. 
 
 # Arrays
 # Lists
@@ -108,6 +136,24 @@ To construct a List, need definition and properties:
   - `toString` : returns a string representation of the list. 
   - `getElement` : returns the element at `pos` (see above)
   - `insert` : 
+
+### Implementation:
+
+First, we add a constructor before implementing all the functions and defining the properties outlined above:
+
+```javascript
+
+//class constructor
+function List() {
+    this.listSize = 0
+    this.pos = 0 //initial position is 0, 0 elements in the list. 
+    this.dataStore = [] //array that will store all elements
+    this.clear = clear;
+}
+
+
+```
+
 # Stacks
 # Queues
 # Linked Lists
