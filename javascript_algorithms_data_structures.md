@@ -141,13 +141,13 @@ function factorial(num):
 
 # Arrays
 
-- built in data type
+- Important facets outlined below:
 
 ### Creation
 
 All these are valid:
 ```javascript
-var arr = []; 
+var arr = [];  //most efficient constructor
 var arr = [1,2,3]; 
 var arr = new Array(); 
 var arr = new Array(1,2,3); 
@@ -157,6 +157,46 @@ var arr = new Array(3); //array of length 3
 var arr = ["hey", 3, 99, "hi", null, true, false]; 
 ```
 also if `arr` is array, `Array.isArray()` returns `true`. 
+
+the `[]` operator writes and accesses values in the array:
+
+```javascript
+var arr = [];
+
+//array population
+for (var i = 0; i < 10; ++i>) {
+    arr[i] = i+1; 
+}
+
+
+//access
+var sum = 0; 
+
+for (var i = 0; i < num.length; ++i>) {
+    sum+=arr[i]; 
+}
+```
+- finally, to create an array from a sentence, (string to array):
+
+```javascript
+var sen = "this is example sentence"
+
+var arrFromSen = sen.split(" ") //split by space
+// then arrFromSen is an array: ["this", "is", "example", "sentence"]
+```
+
+### Shallow Copy, Deep Copy
+
+you can assign one array to another (*shallow copy*):
+
+```javascript
+var arr2 = arr; //shallow copy
+```
+however this only assigns the *reference*. Any changes to `arr` will happen to `arr2`. 
+
+A *deep copy* is often preferable, 
+
+
 # Lists
 
 ### Prototyping the Abstract Data Type
