@@ -210,6 +210,21 @@ copy(arr,arr2);
 
 notice `console.log(arr)` will actually print the contents of the array, rather than a memory address. 
 
+### Accessor Functions
+
+- `indexOf(elem)` : returns index of element in the array, -1 if no element exists. 
+    - `if (arr.indexOf(elem)>0) {}` is a useful way to check if an element is in an array
+    - only returns first occurence of an element. 
+- `lastIndexOf(elem)` : same as indexOf, but returns the last occurence of an element in the array. 
+
+### String Representation of Arrays:
+
+- `join()` : calling `arr.join()` joins all the elements of an array into a string where commas separate the elements. 
+- `toString()` : calling `arr.toString()` also sends to a string all the elements of an array, separated by commas. 
+  - `toString()` is automatically called when you print an array with either `print()` or `console.log()`
+
+### Exercises with Arrays:
+
 
 # Lists
 
@@ -239,8 +254,6 @@ function List() {
     this.dataStore = [] //array that will store all elements
     this.clear = clear;
 }
-
-
 ```
 
 # Stacks
