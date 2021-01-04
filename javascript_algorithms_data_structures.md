@@ -194,7 +194,21 @@ var arr2 = arr; //shallow copy
 ```
 however this only assigns the *reference*. Any changes to `arr` will happen to `arr2`. 
 
-A *deep copy* is often preferable, 
+To avoid this, a *deep copy* is often preferable. To make a deep copy, need to populate new array with elements of original, a good way to do this is to write a copy function:
+
+```javascript
+function copy(arr, arr2) {
+    for (var i = 0; i < arr.length; ++i>) {
+        arr2[i] = arr[i]; 
+    }
+}
+
+var arr2 = []; 
+copy(arr,arr2); 
+///now changes to arr don't change arr2. 
+```
+
+notice `console.log(arr)` will actually print the contents of the array, rather than a memory address. 
 
 
 # Lists
