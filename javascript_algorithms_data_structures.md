@@ -119,9 +119,44 @@ console.log(scope);  // returns 10
 console.log(showScope()); //returns 2
 console.log(scope); //returns 2!!
 ```
-From this we can see that for expected behavior, we should always declare variables with `var` before using them. 
+From this we can see that for expected behavior, we should always declare variables with `var` before using them. Not doing this sets the variable to have global scope by default, even when assigned inside of a function. 
+
+- important! Javascript does not have block scope, only function and global scope. Should still write for loops assuming we have block scope. 
+
+### Recursion
+
+We can rewrite our `factorial` function to use recursion:
+
+```javascript
+function factorial(num):
+    // if at 1, then we're done and return it
+    if (num == 1) {
+        return num; 
+    }
+    // if not, perform factorial operation recursively
+    else  {
+        return number*factorial(number - 1); 
+    }
+```
 
 # Arrays
+
+- built in data type
+
+### Creation
+
+All these are valid:
+```javascript
+var arr = []; 
+var arr = [1,2,3]; 
+var arr = new Array(); 
+var arr = new Array(1,2,3); 
+var arr = new Array(3); //array of length 3
+
+// can have heterogenous types
+var arr = ["hey", 3, 99, "hi", null, true, false]; 
+```
+also if `arr` is array, `Array.isArray()` returns `true`. 
 # Lists
 
 ### Prototyping the Abstract Data Type
